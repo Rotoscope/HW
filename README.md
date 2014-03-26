@@ -28,7 +28,7 @@ LOAD 1 j       <load j>
 ...
 STORE 2 m       m = 5
 [0,0,5]
-
+ 
 1. You should be able to execute your program by typing:
 Java interpreter <bytecode file>
 e.g.,
