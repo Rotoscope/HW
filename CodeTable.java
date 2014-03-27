@@ -27,3 +27,4 @@ public class CodeTable extends Object {
 	return bytecode.get(code);
     }
 }
+ 
