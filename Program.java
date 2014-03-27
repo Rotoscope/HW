@@ -9,7 +9,7 @@ public class Program extends Object {
     String orig;    //original line
     
     public void load(ByteCode bytecode) throws IOException {
-	return;
+	prog.add(bytecode);
     }
      public void run(InputStream in, OutputStream out) {
 	 

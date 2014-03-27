@@ -26,4 +26,11 @@ public class VirtualMachine {
 		pc++;
 	}
     }
+    
+    public void pushRunStack(int i) {runStack.push(i);}
+    public int popRunStack() {return runStack.pop();}
+    public void pushReturnAddrs() {returnAddrs.push(pc);}
+    public void pushFrame(int pc) {runStack.newFrameAt(pc - 1);}
+    public void popFrame() {runStack.popFrame();}
+    public void halt() {isRunning = false;}
 }

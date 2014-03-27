@@ -1,6 +1,5 @@
 package interpreter;
 
-import interpreter.bytecode.*;
 import java.util.*;
 
 public class RunTimeStack {
@@ -10,6 +9,7 @@ public class RunTimeStack {
     public RunTimeStack() {
 	framePointers = new Stack();
 	runStack = new Vector();
+	framePointers.push(0);
     }
     
     public void dump() {
@@ -17,14 +17,15 @@ public class RunTimeStack {
     }
     
     public int peek() {
-	return 1;
+	return runStack.lastElement();
     }
     
     public int pop() {
-	return 1;
+	return runStack.remove(runStack.size() - 1);
     }
     
     public int push(int i) {
+	runStack.add(i);
 	return i;
     }
     

@@ -33,12 +33,10 @@ public class ByteCodeLoader extends Object {
 	
 		if(i == 3) {
 		    c = Class.forName("interpreter."+codeClass).getConstructor(String.class, String.class);
-		    bytecode = 
-			(ByteCode) c.newInstance(bytecodes[1], bytecodes[2]);
+		    bytecode = (ByteCode) c.newInstance(bytecodes[1], bytecodes[2]);
 		} else if(i == 2) {
 		    c = Class.forName("interpreter."+codeClass).getConstructor(String.class);
-		    bytecode = 
-			(ByteCode) c.newInstance(bytecodes[1]);
+		    bytecode = (ByteCode) c.newInstance(bytecodes[1]);
 		} else if(i == 1) {
 		    c = Class.forName("interpreter."+codeClass).getConstructor();
 		    bytecode = (ByteCode) c.newInstance();
