@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class CodeTable extends Object {
     static HashMap<String, String> bytecode;
-    
+   
     public static void init() {
 	bytecode = new HashMap<String, String>();
 	bytecode.put("HALT","HaltCode");
