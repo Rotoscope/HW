@@ -6,7 +6,7 @@ Interpreter (50 points)
 See requirements in the course reader
 
 Note that program output should look like the following - you should use brackets to group values in a frame and separate frames with a space:
-
+ 
 LIT 0 m      int m
 [0,0,0]
 LIT 3
