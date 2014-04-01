@@ -25,7 +25,7 @@ public class VirtualMachine {
 	while(isRunning) {
 		ByteCode code = program.getCode(pc);
 		/**
-		 * The printing of the line comes before the execution because
+		 * The printing of the line comes before the execution because 
 		 * the branching bytecodes such as GoTo, changes the pc after
 		 * its execution.
 		 */
