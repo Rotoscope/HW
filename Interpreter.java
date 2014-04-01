@@ -33,7 +33,7 @@ public class Interpreter {
 
 	public static void main(String args[]) {
 		if (args.length == 0) {
-			System.out.println("***Incorrect usage, try: java interpreter.Interpreter <file>");
+			System.out.println("***Incorrect usage, try: java -jar Interpreter.jar <file>");
 			System.exit(1);
 		}
 		(new Interpreter(args[0])).run();

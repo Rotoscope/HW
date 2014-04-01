@@ -1,6 +1,11 @@
 package interpreter;
 
-import java.util.*;
+import java.util.HashMap;
+
+/**
+ * HashMap of the strings of the bytecodes being the keys and
+ * the name of the class for the bytecode being the value
+ */
 
 public class CodeTable extends Object {
     static HashMap<String, String> bytecode;
@@ -21,6 +26,7 @@ public class CodeTable extends Object {
 	bytecode.put("READ","ReadCode");
 	bytecode.put("WRITE","WriteCode");
 	bytecode.put("LABEL","LabelCode");
+	bytecode.put("DUMP", "DumpCode");
     }
     
     public static String get(String code) {

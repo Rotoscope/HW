@@ -1,15 +1,38 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package interpreter.bytecode;
 
+import interpreter.VirtualMachine;
+import java.util.Vector;
+
 /**
- *
- * @author Azusa
+ * Transfer control to the indicated function
  */
+
 public class CallCode extends ByteCode {
+    String funcname;
+    int resolved;
     
+    public CallCode() {
+    }
+    
+    @Override
+    public void init(Vector<String> n) {
+	type = n.get(0);
+	funcname = n.get(1);
+    }
+
+    @Override
+    public void execute(VirtualMachine vm) {
+	vm.pushReturnAddrs();
+	vm.setPC(resolved - 1);
+    }
+    
+    @Override
+    public String getLabel() {
+	return funcname;
+    }
+    
+    @Override
+    public void setResolvedAddr(int i) {
+	resolved = i;
+    }
 }

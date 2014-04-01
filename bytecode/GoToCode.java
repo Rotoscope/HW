@@ -1,15 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package interpreter.bytecode;
 
+import interpreter.VirtualMachine;
+import java.util.Vector;
+
 /**
- *
- * @author Azusa
+ * GOTO <label>
  */
+
 public class GoToCode extends ByteCode {
+    String label;
+    int resolvedAddr;
     
+    public GoToCode() {
+    }
+
+    @Override
+    public void init(Vector<String> n) {
+	type = n.get(0);
+	label = n.get(1);
+    }
+
+    @Override
+    public void execute(VirtualMachine vm) {
+	vm.setPC(resolvedAddr - 1);
+    }
+    
+    @Override
+    public String getLabel() {
+	return label;
+    }
+    
+    @Override
+    public void setResolvedAddr(int i) {
+	resolvedAddr = i;
+    }
 }

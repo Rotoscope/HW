@@ -1,15 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package interpreter.bytecode;
 
+import interpreter.VirtualMachine;
+import java.util.Vector;
+
 /**
- *
- * @author Azusa
+ * Write the value on the top of the stack to the output
  */
+
 public class WriteCode extends ByteCode {
+    
+    public WriteCode() {
+    }
+
+    @Override
+    public void init(Vector<String> n) {
+	type = n.get(0);
+    }
+
+    @Override
+    public void execute(VirtualMachine vm) {
+	System.out.println(vm.peekRunStack());
+    }
     
 }
