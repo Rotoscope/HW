@@ -371,6 +371,3 @@ into your DUMP implementation. Input any valid integer, and see it multiplied
 by 3.
 
 
-
-
-
